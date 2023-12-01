@@ -117,7 +117,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4" type="video/mp4">
+        <source src="./static/videos/demo video.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">UDiffText</span> can synthesize the text you want in arbitrary images
@@ -131,52 +131,49 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
+        <div class="item">
+          <video poster="123" id="0" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/0.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
+        <div class="item">
+          <video poster="" id="1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
+        <div class="item">
+          <video poster="" id="2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/2.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
+        <div class="item">
+          <video poster="" id="3" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
+        <div class="item">
+          <video poster="" id="4" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/4.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
+        <div class="item">
+          <video poster="" id="5" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/5.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
+        <div class="item">
+          <video poster="" id="6" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/6.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
+        <div class="item">
+          <video poster="" id="7" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/7.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="8" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/8.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -193,31 +190,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Text-to-Image (T2I) generation methods based on diffusion model have garnered significant attention in the last few years. 
+            Although these image synthesis methods produce visually appealing results, they frequently exhibit spelling errors when rendering text within the generated images. 
+            Such errors manifest as missing, incorrect or extraneous characters, thereby severely constraining the performance of text image generation based on diffusion models. 
+            To address the aforementioned issue, this paper proposes a novel approach for text image generation, utilizing a pre-trained diffusion model (i.e., Stable Diffusion). 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Our approach involves the design and training of a light-weight character-level text encoder, 
+            which replaces the original CLIP encoder and provides more robust text embeddings as conditional guidance. 
+            Then, we  fine-tune the diffusion model using a large-scale dataset, incorporating local attention control under the supervision of character-level segmentation maps. 
+            Finally, by employing an inference stage refinement process, we achieve a notably high sequence accuracy when synthesizing text in arbitrarily given images. 
+            Both qualitative and quantitative results demonstrate the superiority of our method to the state of the art. 
+            Furthermore, we showcase several potential applications of the proposed UDiffText, including text-centric image synthesis, scene text editing, etc. 
           </p>
         </div>
       </div>
