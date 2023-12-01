@@ -182,7 +182,7 @@
 </section>
 
 
-<section class="section">
+<section class="section is-light is-small">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -190,18 +190,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Text-to-Image (T2I) generation methods based on diffusion model have garnered significant attention in the last few years. 
-            Although these image synthesis methods produce visually appealing results, they frequently exhibit spelling errors when rendering text within the generated images. 
-            Such errors manifest as missing, incorrect or extraneous characters, thereby severely constraining the performance of text image generation based on diffusion models. 
-            To address the aforementioned issue, this paper proposes a novel approach for text image generation, utilizing a pre-trained diffusion model (i.e., Stable Diffusion). 
+            we aim to design a unified framework for high-quality text synthesis in both synthetic and real-world images. 
+            The proposed method, UDiffText, is built based on the inpainting variant of Stable Diffusion (v2.0). 
+            Specifically, we first design and train a light-weight character-level (CL) text encoder as a substitute for the original CLIP text encoder. 
+            Then, we train the model using the denoising score matching (DSM) loss in conjunction with the local attention loss and scene text recognition loss. 
           </p>
+          <div class="column is-centered has-text-centered">
+            <img src="static/images/teaser.pdf" alt="structure"/>
+          </div>
           <p>
-            Our approach involves the design and training of a light-weight character-level text encoder, 
-            which replaces the original CLIP encoder and provides more robust text embeddings as conditional guidance. 
-            Then, we  fine-tune the diffusion model using a large-scale dataset, incorporating local attention control under the supervision of character-level segmentation maps. 
-            Finally, by employing an inference stage refinement process, we achieve a notably high sequence accuracy when synthesizing text in arbitrarily given images. 
-            Both qualitative and quantitative results demonstrate the superiority of our method to the state of the art. 
-            Furthermore, we showcase several potential applications of the proposed UDiffText, including text-centric image synthesis, scene text editing, etc. 
+            An overview of the training process of our proposed UDiffText. 
+            We build our model based on the inpainting version of Stable Diffusion (v2.0). 
+            A character-level (CL) text encoder is utilized to obtain robust embeddings from the text to be rendered. 
+            We train the model using denoising score matching (DSM) together with the local attention loss calculated based on 
+            character-level segmentation maps and the auxiliary scene text recognition loss. 
+            Note that only the parameters of cross-attention (CA) blocks are updated during training.
           </p>
         </div>
       </div>
