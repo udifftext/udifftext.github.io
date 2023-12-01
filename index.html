@@ -116,7 +116,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay controls muted loop playsinline width="80%">
+      <video id="teaser" autoplay controls muted loop playsinline width="100%">
         <source src="./static/videos/demo video.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -225,15 +225,50 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered"></div>
+      <video poster="" id="tree" autoplay muted loop playsinline width="100%"><source src="static/videos/illu1.mp4" type="video/mp4"></video>
+      <video poster="" id="tree" autoplay muted loop playsinline width="100%"><source src="static/videos/illu2.mp4" type="video/mp4"></video>
+    </div>
+  </div>
+</section>
 
-    <p style="margin-top: 30px ; margin-bottom: 30px">
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-Image (T2I) generation methods based on diffusion model have garnered significant attention in the last few years. 
+            Although these image synthesis methods produce visually appealing results, they frequently exhibit spelling errors when rendering text within the generated images. 
+            Such errors manifest as missing, incorrect or extraneous characters, thereby severely constraining the performance of text image generation based on diffusion models. 
+            To address the aforementioned issue, this paper proposes a novel approach for text image generation, utilizing a pre-trained diffusion model (i.e., Stable Diffusion). 
+          </p>
+          <p>
+            Our approach involves the design and training of a light-weight character-level text encoder, 
+            which replaces the original CLIP encoder and provides more robust text embeddings as conditional guidance. 
+            Then, we  fine-tune the diffusion model using a large-scale dataset, incorporating local attention control under the supervision of character-level segmentation maps. 
+            Finally, by employing an inference stage refinement process, we achieve a notably high sequence accuracy when synthesizing text in arbitrarily given images. 
+            Both qualitative and quantitative results demonstrate the superiority of our method to the state of the art. 
+            Furthermore, we showcase several potential applications of the proposed UDiffText, including text-centric image synthesis, scene text editing, etc. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
 
-    <video poster="" id="tree" autoplay muted loop playsinline width="50%"><source src="static/videos/illu1.mp4" type="video/mp4"></video>
-    <video poster="" id="tree" autoplay muted loop playsinline width="50%"><source src="static/videos/illu2.mp4" type="video/mp4"></video>
-
-    </p>
-
-
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
   </div>
 </section>
 
