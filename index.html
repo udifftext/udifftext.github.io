@@ -182,60 +182,7 @@
 </section>
 
 
-<section class="section is-light is-small">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            we aim to design a unified framework for high-quality text synthesis in both synthetic and real-world images. 
-            The proposed method, UDiffText, is built based on the inpainting variant of Stable Diffusion (v2.0). 
-            Specifically, we first design and train a light-weight character-level (CL) text encoder as a substitute for the original CLIP text encoder. 
-            Then, we train the model using the denoising score matching (DSM) loss in conjunction with the local attention loss and scene text recognition loss. 
-          </p>
-          <div class="column is-centered has-text-centered">
-            <img src="static/images/teaser.pdf" alt="structure"/>
-          </div>
-          <p>
-            An overview of the training process of our proposed UDiffText. 
-            We build our model based on the inpainting version of Stable Diffusion (v2.0). 
-            A character-level (CL) text encoder is utilized to obtain robust embeddings from the text to be rendered. 
-            We train the model using denoising score matching (DSM) together with the local attention loss calculated based on 
-            character-level segmentation maps and the auxiliary scene text recognition loss. 
-            Note that only the parameters of cross-attention (CA) blocks are updated during training.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered"></div>
-      <video poster="" id="tree" autoplay muted loop playsinline width="100%"><source src="static/videos/illu1.mp4" type="video/mp4"></video>
-      <video poster="" id="tree" autoplay muted loop playsinline width="100%"><source src="static/videos/illu2.mp4" type="video/mp4"></video>
-    </div>
-  </div>
-</section>
-
-<section class="section">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -272,6 +219,46 @@
       </div>
     </div> -->
     <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered"></div>
+      <video poster="" id="tree" autoplay muted loop playsinline width="100%"><source src="static/videos/illu1.mp4" type="video/mp4"></video>
+      <video poster="" id="tree" autoplay muted loop playsinline width="100%"><source src="static/videos/illu2.mp4" type="video/mp4"></video>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Methodology</h2>
+        <div class="content has-text-justified">
+          <p>
+            we aim to design a unified framework for high-quality text synthesis in both synthetic and real-world images. 
+            The proposed method, UDiffText, is built based on the inpainting variant of Stable Diffusion (v2.0). 
+            Specifically, we first design and train a light-weight character-level (CL) text encoder as a substitute for the original CLIP text encoder. 
+            Then, we train the model using the denoising score matching (DSM) loss in conjunction with the local attention loss and scene text recognition loss. 
+          </p>
+          <div class="column is-centered has-text-centered">
+            <img src="static/images/structure.png" alt="structure"/>
+          </div>
+          <p>
+            An overview of the training process of our proposed UDiffText. 
+            We build our model based on the inpainting version of Stable Diffusion (v2.0). 
+            A character-level (CL) text encoder is utilized to obtain robust embeddings from the text to be rendered. 
+            We train the model using denoising score matching (DSM) together with the local attention loss calculated based on 
+            character-level segmentation maps and the auxiliary scene text recognition loss. 
+            Note that only the parameters of cross-attention (CA) blocks are updated during training.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
